@@ -6,6 +6,10 @@
   <packaging>war</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>
+    <scm>
+                <connection>scm:git:https://github.com/vinoth69/maven/</connection>
+    <developerConnection>scm:git:https://github.com/vinoth69/maven/</developerConnection>
+  </scm>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
