@@ -4,12 +4,12 @@
   <artifactId>maven_project</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <scm>
+	<connection>scm:svn:http://source.sify.net/svn/TMRep/registrations/source/ibps/registrations/tags/jenkinstest/bamboo</connection>
+    <developerConnection>scm:svn:http://source.sify.net/svn/TMRep/registrations/source/ibps/registrations/tags/jenkinstest/bamboo</developerConnection>
+  </scm>
   <build>
     <sourceDirectory>src</sourceDirectory>
-    <scm>
-                <connection>scm:git:https://github.com/vinoth69/maven/</connection>
-    <developerConnection>scm:git:https://github.com/vinoth69/maven/</developerConnection>
-  </scm>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -26,6 +26,17 @@
           <warSourceDirectory>WebContent</warSourceDirectory>
         </configuration>
       </plugin>
+	  <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>cobertura-maven-plugin</artifactId>
+        <version>2.6</version>
+        <configuration>
+            <formats>
+                <format>html</format>
+                <format>xml</format>
+            </formats>
+        </configuration>
+    </plugin>
     </plugins>
   </build>
 </project>
